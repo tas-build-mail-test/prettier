@@ -1,0 +1,15 @@
+---
+framework: jest
+tier: large
+postMerge: 
+  pattern: 
+    - "./tests/integration/__tests__/*.js"
+preMerge:
+  pattern:
+    - "./tests/integration/__tests__/*.js"
+preRun:
+     command:
+        - yarn install
+postRun:
+    command:
+        - yarn version
